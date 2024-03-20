@@ -1,0 +1,8 @@
+name: GitHub Actions Variables
+on: [workflow_dispatch]
+jobs:
+  GitHub-Actions-Variables:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "VARIABLE_1" => ${{ vars.VARIABLE_1 }}"
+      
