@@ -1,6 +1,5 @@
-name: GitHub Actions Demo
-run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
-on: [push]
+name: GitHub Actions Demo v2
+on: [pull_request]
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
@@ -16,3 +15,7 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
+      - run: echo "🔚 This job's status is ${{ job.conclusion }}."
+      - run: echo "🎈 The event that triggered this job was ${{ github.event_name }}."
+      - run: echo "🐳 The OS of the runner this job is using is ${{ runner.os }}."
+      - run: echo "🙊 The commit that triggered this job was ${{ github.sha }}."
